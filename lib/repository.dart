@@ -2,7 +2,7 @@ part of dartling_types;
  
 // lib/repository.dart 
  
-class Repository extends Repo { 
+class Repository extends Repository { 
  
   static const REPOSITORY = "Repository"; 
  
