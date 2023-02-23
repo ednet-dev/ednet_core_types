@@ -2,7 +2,7 @@
 // test/dartling/types/dartling_types_type_test.dart 
  
 import "package:test/test.dart"; 
-import "package:dartling/dartling.dart"; 
+import "package:ednet_core/ednet_core.dart"; 
 import "package:dartling_types/dartling_types.dart" as dt; 
  
 testDartlingTypesTypes( 

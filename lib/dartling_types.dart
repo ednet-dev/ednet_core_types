@@ -39,7 +39,7 @@ library dartling_types;
 //import "dart:convert"; 
 //import "dart:math"; 
  
-import "package:dartling/dartling.dart"; 
+import "package:ednet_core/ednet_core.dart"; 
  
 part "repository.dart"; 
  
