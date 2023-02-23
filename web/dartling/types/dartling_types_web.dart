@@ -7,8 +7,8 @@ import "package:ednet_core_default_app/ednet_core_default_app.dart";
 import "package:dartling_types/dartling_types.dart"; 
  
 initData(Repository repository) { 
-   var dartlingDomain = repository.getDomainModels("EDNetCore"); 
-   var typesModel = dartlingDomain.getModelEntries("Types"); 
+   var ednetCoreDomain = repository.getDomainModels("EDNetCore"); 
+   var typesModel = ednetCoreDomain.getModelEntries("Types"); 
    typesModel.init(); 
    //typesModel.display(); 
 } 

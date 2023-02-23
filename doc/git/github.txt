@@ -32,7 +32,7 @@ Create a New Repo at GitHub
 (without README, since cloning will not be used).
 Repository Name: dartling_types
 Description:
-  The generic web component from mgmt_entities is improved by metaprogramming in dartling.
+  The generic web component from mgmt_entities is improved by metaprogramming in EDNetCore.
 
 Please, replace dzenanr (4x) by your GitHub account name.
 

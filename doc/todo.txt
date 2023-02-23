@@ -4,7 +4,7 @@ Done
 + use not increment attributes in entity table
 + use '' instead of null in fields
 + validate value type 
-+ add in dartling meta: 
++ add in EDNetCore meta:
   + attribute length
   + concept singular and plural labels
   + property label

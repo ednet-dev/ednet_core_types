@@ -6,10 +6,10 @@ import "package:ednet_core/ednet_core.dart";
 import "package:dartling_types/dartling_types.dart" as dt; 
  
 testDartlingTypesTypes( 
-    dt.DartlingDomain dartlingDomain, dt.TypesModel typesModel, dt.Types types) { 
+    dt.DartlingDomain ednetCoreDomain, dt.TypesModel typesModel, dt.Types types) { 
   DomainSession session; 
   group("Testing EDNetCore.Types.Type", () { 
-    session = dartlingDomain.newSession();  
+    session = ednetCoreDomain.newSession();  
     setUp(() { 
       typesModel.init(); 
     }); 
@@ -452,7 +452,7 @@ testDartlingTypesTypes(
       var reaction = new TypeReaction(); 
       expect(reaction, isNotNull); 
  
-      dartlingDomain.startActionReaction(reaction); 
+      ednetCoreDomain.startActionReaction(reaction); 
           var type = new dt.Type(types.concept); 
       type.title = 'tent'; 
       type.email = 'patrick@smith.com'; 
@@ -469,7 +469,7 @@ testDartlingTypesTypes(
       types.remove(type); 
       expect(types.length, equals(--typeCount)); 
  
-      var session = dartlingDomain.newSession(); 
+      var session = ednetCoreDomain.newSession(); 
       var addAction = new AddAction(session, types, type); 
       addAction.doit(); 
       expect(types.length, equals(++typeCount)); 
@@ -479,7 +479,7 @@ testDartlingTypesTypes(
         session, type, "title", 'message'); 
       setAttributeAction.doit(); 
       expect(reaction.reactedOnUpdate, isTrue); 
-      dartlingDomain.cancelActionReaction(reaction); 
+      ednetCoreDomain.cancelActionReaction(reaction); 
     }); 
  
   }); 
@@ -500,11 +500,11 @@ class TypeReaction implements ActionReactionApi {
  
 void main() { 
   var repository = new dt.Repository(); 
-  var dartlingDomain = repository.getDomainModels("EDNetCore");   
-  assert(dartlingDomain != null); 
-  var typesModel = dartlingDomain.getModelEntries("Types");  
+  var ednetCoreDomain = repository.getDomainModels("EDNetCore");   
+  assert(ednetCoreDomain != null); 
+  var typesModel = ednetCoreDomain.getModelEntries("Types");  
   assert(typesModel != null); 
   var types = typesModel.types; 
-  testDartlingTypesTypes(dartlingDomain, typesModel, types); 
+  testDartlingTypesTypes(ednetCoreDomain, typesModel, types); 
 } 
  

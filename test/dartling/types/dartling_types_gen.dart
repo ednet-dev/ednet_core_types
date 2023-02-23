@@ -8,8 +8,8 @@ genCode(Repository repository) {
 } 
  
 initData(Repository repository) { 
-   var dartlingDomain = repository.getDomainModels("EDNetCore"); 
-   var typesModel = dartlingDomain.getModelEntries("Types"); 
+   var ednetCoreDomain = repository.getDomainModels("EDNetCore"); 
+   var typesModel = ednetCoreDomain.getModelEntries("Types"); 
    typesModel.init(); 
    //typesModel.display(); 
 } 
