@@ -1,6 +1,6 @@
 part of dartling_types; 
  
-// lib/dartling/types/types.dart 
+// lib/ednet_core/types/types.dart 
  
 class Type extends TypeGen { 
  

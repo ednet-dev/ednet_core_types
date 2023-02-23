@@ -1,7 +1,7 @@
  
 part of dartling_types; 
  
-// lib/dartling/types/model.dart 
+// lib/ednet_core/types/model.dart 
  
 class TypesModel extends TypesEntries { 
  

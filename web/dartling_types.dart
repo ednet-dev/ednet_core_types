@@ -3,6 +3,6 @@ import 'package:dartling_types/dartling_types_app.dart';
 
 main() {
   var repository = new Repository(); 
-  DartlingModels domain = repository.getDomainModels('Dartling');
+  DartlingModels domain = repository.getDomainModels('EDNetCore');
   new TypesApp(domain);
 }

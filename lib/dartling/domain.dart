@@ -1,6 +1,6 @@
 part of dartling_types; 
  
-// lib/dartling/domain.dart 
+// lib/ednet_core/domain.dart 
  
 class DartlingDomain extends DartlingModels { 
  

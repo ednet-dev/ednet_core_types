@@ -1,13 +1,13 @@
  
-// web/dartling/types/dartling_types_web.dart 
+// web/ednet_core/types/dartling_types_web.dart 
  
 import "dart:html"; 
  
-import "package:dartling_default_app/dartling_default_app.dart"; 
+import "package:ednet_core_default_app/ednet_core_default_app.dart"; 
 import "package:dartling_types/dartling_types.dart"; 
  
 initData(Repository repository) { 
-   var dartlingDomain = repository.getDomainModels("Dartling"); 
+   var dartlingDomain = repository.getDomainModels("EDNetCore"); 
    var typesModel = dartlingDomain.getModelEntries("Types"); 
    typesModel.init(); 
    //typesModel.display(); 

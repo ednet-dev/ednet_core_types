@@ -3,7 +3,7 @@ part of dartling_types;
 // http://www.json.org/
 // http://jsonformatter.curiousconcept.com/
 
-// lib/dartling/types/json/model.dart
+// lib/ednet_core/types/json/model.dart
 
 var dartlingTypesModelJson = r'''
 {

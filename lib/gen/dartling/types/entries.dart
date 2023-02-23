@@ -1,6 +1,6 @@
 part of dartling_types; 
  
-// lib/gen/dartling/types/entries.dart 
+// lib/gen/ednet_core/types/entries.dart 
  
 class TypesEntries extends ModelEntries { 
  

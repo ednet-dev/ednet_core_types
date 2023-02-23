@@ -1,5 +1,5 @@
  
-// test/dartling/types/dartling_types_type_test.dart 
+// test/ednet_core/types/dartling_types_type_test.dart 
  
 import "package:test/test.dart"; 
 import "package:ednet_core/ednet_core.dart"; 
@@ -8,7 +8,7 @@ import "package:dartling_types/dartling_types.dart" as dt;
 testDartlingTypesTypes( 
     dt.DartlingDomain dartlingDomain, dt.TypesModel typesModel, dt.Types types) { 
   DomainSession session; 
-  group("Testing Dartling.Types.Type", () { 
+  group("Testing EDNetCore.Types.Type", () { 
     session = dartlingDomain.newSession();  
     setUp(() { 
       typesModel.init(); 
@@ -500,7 +500,7 @@ class TypeReaction implements ActionReactionApi {
  
 void main() { 
   var repository = new dt.Repository(); 
-  var dartlingDomain = repository.getDomainModels("Dartling");   
+  var dartlingDomain = repository.getDomainModels("EDNetCore");   
   assert(dartlingDomain != null); 
   var typesModel = dartlingDomain.getModelEntries("Types");  
   assert(typesModel != null); 

@@ -1,5 +1,5 @@
  
-// test/dartling/types/dartling_types_gen.dart 
+// test/ednet_core/types/dartling_types_gen.dart 
  
 import "package:dartling_types/dartling_types.dart"; 
  
@@ -8,7 +8,7 @@ genCode(Repository repository) {
 } 
  
 initData(Repository repository) { 
-   var dartlingDomain = repository.getDomainModels("Dartling"); 
+   var dartlingDomain = repository.getDomainModels("EDNetCore"); 
    var typesModel = dartlingDomain.getModelEntries("Types"); 
    typesModel.init(); 
    //typesModel.display(); 

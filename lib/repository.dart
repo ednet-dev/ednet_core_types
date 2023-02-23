@@ -7,7 +7,7 @@ class Repository extends Repository {
   static const REPOSITORY = "Repository"; 
  
   Repository([String code=REPOSITORY]) : super(code) { 
-    var domain = new Domain("Dartling"); 
+    var domain = new Domain("EDNetCore"); 
     domains.add(domain); 
     add(new DartlingDomain(domain)); 
  

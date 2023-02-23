@@ -4,7 +4,7 @@
 
 ## Description: 
 dartling_types project uses 
-[dartling](https://github.com/dzenanr/dartling) for the model.
+[EDNetCore](https://github.com/ednet-dev/ednet_core) for the model.
 
 The generic web component from 
 [mgmt_entities](https://github.com/dzenanr/mgmt_entities) 

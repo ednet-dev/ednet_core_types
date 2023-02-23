@@ -1,6 +1,6 @@
 part of dartling_types; 
  
-// lib/gen/dartling/types/types.dart 
+// lib/gen/ednet_core/types/types.dart 
  
 abstract class TypeGen extends Entity<Type> { 
  
