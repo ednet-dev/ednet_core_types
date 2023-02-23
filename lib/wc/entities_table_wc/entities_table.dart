@@ -77,7 +77,7 @@ class EntitiesTable {
     table.nodes.add(hRow);
   }
   
-  addDataRow(ConceptEntity entity) {
+  addDataRow(Entity entity) {
     TableRowElement dRow = new Element.tr();
     
     for (Attribute attribute in essentialAttributes) {

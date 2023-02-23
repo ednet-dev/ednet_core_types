@@ -2,7 +2,7 @@ part of dartling_types;
  
 // lib/gen/dartling/types/types.dart 
  
-abstract class TypeGen extends ConceptEntity<Type> { 
+abstract class TypeGen extends Entity<Type> { 
  
   TypeGen(Concept concept) {
     this.concept = concept;

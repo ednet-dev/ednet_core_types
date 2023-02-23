@@ -3,7 +3,7 @@ part of entities_table_wc;
 class EntityTable { 
   List<Attribute> nonIncrementAttributes;
   Entities entities;
-  ConceptEntity currentEntity;
+  Entity currentEntity;
   
   TableElement table = querySelector('#entity-table');
   ButtonElement addButton = querySelector('#add-button');
