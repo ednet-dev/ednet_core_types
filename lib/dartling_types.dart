@@ -44,7 +44,7 @@ import "package:ednet_core/ednet_core.dart";
 part "repository.dart"; 
  
 part "gen/ednet_core/models.dart"; 
-part "gen/ednet_core/types/entries.dart"; 
+part "gen/ednet_core/types/model_entries.dart";
 part "gen/ednet_core/types/types.dart"; 
  
 part "ednet_core/domain.dart"; 

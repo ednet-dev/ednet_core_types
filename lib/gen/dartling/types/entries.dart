@@ -1,6 +1,6 @@
 part of dartling_types; 
  
-// lib/gen/ednet_core/types/entries.dart 
+// lib/gen/ednet_core/types/model_entries.dart
  
 class TypesEntries extends ModelEntries { 
  
@@ -14,7 +14,7 @@ class TypesEntries extends ModelEntries {
     return entries; 
   } 
  
-  Entities newEntities(String conceptCode) { 
+  Entities? newEntities(String conceptCode) { 
     var concept = model.concepts.singleWhereCode(conceptCode); 
     if (concept == null) { 
       throw new ConceptError("${conceptCode} concept does not exist.") ; 
@@ -25,7 +25,7 @@ class TypesEntries extends ModelEntries {
     return null; 
   } 
  
-  Entity newEntity(String conceptCode) { 
+  Entity? newEntity(String conceptCode) { 
     var concept = model.concepts.singleWhereCode(conceptCode); 
     if (concept == null) { 
       throw new ConceptError("${conceptCode} concept does not exist.") ; 
