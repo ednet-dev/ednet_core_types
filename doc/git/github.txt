@@ -1,4 +1,4 @@
-github.txt for dartling_types
+github.txt for ednet_core_types
 
 GitHub, Git
 
@@ -30,19 +30,19 @@ http://help.github.com/create-a-repo/
 
 Create a New Repo at GitHub
 (without README, since cloning will not be used).
-Repository Name: dartling_types
+Repository Name: ednet_core_types
 Description:
   The generic web component from mgmt_entities is improved by metaprogramming in EDNetCore.
 
 Please, replace dzenanr (4x) by your GitHub account name.
 
 Next steps:
-  cd git/dart/dartling_types
+  cd git/dart/ednet_core_types
   git init
   git status
   git add .
   git commit -m 'initial version'
-  git remote add origin https://github.com/dzenanr/dartling_types.git
+  git remote add origin https://github.com/ednet-dev/ednet_core_types.git
   git push -u origin master
 
 -------------------------------------------------------------------------------
@@ -52,14 +52,14 @@ Git with Git Bash
 Clone a remote repository into a local repository.
 
 cd git/dart
-git clone https://github.com/dzenanr/dartling_types.git
-cd dartling_types
+git clone https://github.com/ednet-dev/ednet_core_types.git
+cd ednet_core_types
 
 Read+Write:
-https://github.com/dzenanr/dartling_types.git
+https://github.com/ednet-dev/ednet_core_types.git
 
 Read only:
-git://github.com/dzenanr/dartling_types.git
+git://github.com/ednet-dev/ednet_core_types.git
 
 Get the latest changes from the remote repository
 
@@ -71,7 +71,7 @@ git pull origin master
 
 Work with a local repository
 
-cd git/dart/dartling_types
+cd git/dart/ednet_core_types
 
 git status
 

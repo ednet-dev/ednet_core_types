@@ -1,5 +1,5 @@
  
-// lib/dartling_types.dart 
+// lib/ednet_core_types.dart 
  
 /*
 http://opensource.org/licenses/
@@ -34,7 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
  
  
-library dartling_types; 
+library ednet_core_types; 
  
 //import "dart:convert"; 
 //import "dart:math"; 
@@ -43,7 +43,7 @@ import "package:ednet_core/ednet_core.dart";
  
 part "repository.dart"; 
  
-part "gen/ednet_core/models.dart"; 
+part "gen/ednet_core/i_domain_models.dart";
 part "gen/ednet_core/types/model_entries.dart";
 part "gen/ednet_core/types/types.dart"; 
  

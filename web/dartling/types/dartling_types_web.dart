@@ -1,10 +1,10 @@
  
-// web/ednet_core/types/dartling_types_web.dart 
+// web/ednet_core/types/ednet_core_types_web.dart 
  
 import "dart:html"; 
  
 import "package:ednet_core_default_app/ednet_core_default_app.dart"; 
-import "package:dartling_types/dartling_types.dart"; 
+import "package:ednet_core_types/ednet_core_types.dart"; 
  
 initData(Repository repository) { 
    var ednetCoreDomain = repository.getDomainModels("EDNetCore"); 

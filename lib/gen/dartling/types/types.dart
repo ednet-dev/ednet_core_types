@@ -1,4 +1,4 @@
-part of dartling_types; 
+part of ednet_core_types; 
  
 // lib/gen/ednet_core/types/types.dart 
  

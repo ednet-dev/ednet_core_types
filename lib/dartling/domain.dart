@@ -1,10 +1,10 @@
-part of dartling_types; 
+part of ednet_core_types; 
  
 // lib/ednet_core/domain.dart 
  
-class DartlingDomain extends DartlingModels { 
+class EDNetCoreDomain extends EDNetCoreModels { 
  
-  DartlingDomain(Domain domain) : super(domain); 
+  EDNetCoreDomain(Domain domain) : super(domain); 
  
   // added after code gen - begin 
  

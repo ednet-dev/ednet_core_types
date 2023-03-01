@@ -1,11 +1,11 @@
-part of dartling_types;
+part of ednet_core_types;
 
 // http://www.json.org/
 // http://jsonformatter.curiousconcept.com/
 
 // lib/ednet_core/types/json/model.dart
 
-var dartlingTypesModelJson = r'''
+var ednetCoreTypesModelJson = r'''
 {
    "width":990,
    "height":580,

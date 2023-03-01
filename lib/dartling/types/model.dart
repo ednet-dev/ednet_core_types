@@ -1,5 +1,5 @@
  
-part of dartling_types; 
+part of ednet_core_types; 
  
 // lib/ednet_core/types/model.dart 
  
@@ -8,11 +8,11 @@ class TypesModel extends TypesEntries {
   TypesModel(Model model) : super(model); 
  
   fromJsonToTypeEntry() { 
-    fromJsonToEntry(dartlingTypesTypeEntry); 
+    fromJsonToEntry(ednetCoreTypesTypeEntry); 
   } 
  
   fromJsonToModel() { 
-    fromJson(dartlingTypesModel); 
+    fromJson(ednetCoreTypesModel); 
   } 
  
   init() { 

@@ -1,10 +1,10 @@
  
-// test/ednet_core/types/dartling_types_gen.dart 
+// test/ednet_core/types/ednet_core_types_gen.dart 
  
-import "package:dartling_types/dartling_types.dart"; 
+import "package:ednet_core_types/ednet_core_types.dart"; 
  
 genCode(Repository repository) { 
-  repository.gen("dartling_types"); 
+  repository.gen("ednet_core_types"); 
 } 
  
 initData(Repository repository) { 

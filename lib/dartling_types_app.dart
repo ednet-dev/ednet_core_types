@@ -1,5 +1,5 @@
  
-// lib/dartling_types_app.dart 
+// lib/ednet_core_types_app.dart 
  
 /*
 http://opensource.org/licenses/
@@ -34,7 +34,7 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
  
  
-library dartling_types_app; 
+library ednet_core_types_app; 
  
 
 import "dart:html"; 
@@ -43,11 +43,11 @@ import "dart:html";
 //import "package:ednet_core/ednet_core.dart"; 
 //import "package:ednet_core_default_app/ednet_core_default_app.dart"; 
  
-import "package:dartling_types/dartling_types.dart";
+import "package:ednet_core_types/ednet_core_types.dart";
 
 // added by hand
 
-import 'package:dartling_types/wc/entities_table_wc.dart';
+import 'package:ednet_core_types/wc/entities_table_wc.dart';
 
 part 'app/types_app.dart';
 

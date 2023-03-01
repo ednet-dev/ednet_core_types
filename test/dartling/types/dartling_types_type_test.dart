@@ -1,12 +1,12 @@
  
-// test/ednet_core/types/dartling_types_type_test.dart 
+// test/ednet_core/types/ednet_core_types_type_test.dart 
  
 import "package:test/test.dart"; 
 import "package:ednet_core/ednet_core.dart"; 
-import "package:dartling_types/dartling_types.dart" as dt; 
+import "package:ednet_core_types/ednet_core_types.dart" as dt; 
  
-testDartlingTypesTypes( 
-    dt.DartlingDomain ednetCoreDomain, dt.TypesModel typesModel, dt.Types types) { 
+testEDNetCoreTypesTypes( 
+    dt.EDNetCoreDomain ednetCoreDomain, dt.TypesModel typesModel, dt.Types types) { 
   DomainSession session; 
   group("Testing EDNetCore.Types.Type", () { 
     session = ednetCoreDomain.newSession();  
@@ -86,8 +86,8 @@ testDartlingTypesTypes(
     }); 
  
     test("Not found type by new oid", () { 
-      var dartlingOid = new Oid.ts(1345648254063); 
-      var type = types.singleWhereOid(dartlingOid); 
+      var ednetCoreOid = new Oid.ts(1345648254063); 
+      var type = types.singleWhereOid(ednetCoreOid); 
       expect(type, isNull); 
     }); 
  
@@ -505,6 +505,6 @@ void main() {
   var typesModel = ednetCoreDomain.getModelEntries("Types");  
   assert(typesModel != null); 
   var types = typesModel.types; 
-  testDartlingTypesTypes(ednetCoreDomain, typesModel, types); 
+  testEDNetCoreTypesTypes(ednetCoreDomain, typesModel, types); 
 } 
  
