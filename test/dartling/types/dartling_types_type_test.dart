@@ -26,7 +26,7 @@ testEDNetCoreTypesTypes(
       typesModel.clear(); 
       expect(typesModel.isEmpty, isTrue); 
       expect(types.isEmpty, isTrue); 
-      expect(types.errors.isEmpty, isTrue); 
+      expect(types.exceptions..isEmpty, isTrue); 
     }); 
  
     test("From model to JSON", () { 
@@ -75,10 +75,10 @@ testEDNetCoreTypesTypes(
       var added = types.add(type); 
       expect(added, isFalse); 
       expect(types.length, equals(typeCount)); 
-      expect(types.errors.length, greaterThan(0)); 
-      expect(types.errors.toList()[0].category, equals("required")); 
+      expect(types.exceptions..length, greaterThan(0)); 
+      expect(types.exceptions..toList()[0].category, equals("required")); 
  
-      types.errors.display(title: "Add type required error"); 
+      types.exceptions..display(title: "Add type required error"); 
     }); 
  
     test("Add type unique error", () { 
@@ -149,7 +149,7 @@ testEDNetCoreTypesTypes(
       var selectedTypes = 
           types.selectWhereAttribute("title", randomType.title); 
       expect(selectedTypes.isEmpty, isFalse); 
-      expect(selectedTypes.source.isEmpty, isFalse); 
+      expect(selectedTypes.source?.isEmpty, isFalse); 
       var typesCount = types.length; 
  
       var type = new dt.Type(types.concept); 
@@ -177,7 +177,7 @@ testEDNetCoreTypesTypes(
       var selectedTypes = 
           types.selectWhereAttribute("title", randomType.title); 
       expect(selectedTypes.isEmpty, isFalse); 
-      expect(selectedTypes.source.isEmpty, isFalse); 
+      expect(selectedTypes.source?.isEmpty, isFalse); 
       var typesCount = types.length; 
  
       var removed = selectedTypes.remove(randomType); 
@@ -200,8 +200,8 @@ testEDNetCoreTypesTypes(
       var orderedTypes = types.order(); 
       expect(orderedTypes.isEmpty, isFalse); 
       expect(orderedTypes.length, equals(types.length)); 
-      expect(orderedTypes.source.isEmpty, isFalse); 
-      expect(orderedTypes.source.length, equals(types.length)); 
+      expect(orderedTypes.source?.isEmpty, isFalse); 
+      expect(orderedTypes.source?.length, equals(types.length)); 
       expect(orderedTypes, isNot(same(types))); 
  
       //orderedTypes.display(title: "Order types"); 
