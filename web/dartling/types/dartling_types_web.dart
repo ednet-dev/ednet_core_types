@@ -6,14 +6,14 @@ import "dart:html";
 import "package:ednet_core_default_app/ednet_core_default_app.dart"; 
 import "package:ednet_core_types/ednet_core_types.dart"; 
  
-initData(Repository repository) { 
+initData(CoreRepository repository) { 
    var ednetCoreDomain = repository.getDomainModels("EDNetCore"); 
    var typesModel = ednetCoreDomain.getModelEntries("Types"); 
    typesModel.init(); 
    //typesModel.display(); 
 } 
  
-showData(Repository repository) { 
+showData(CoreRepository repository) { 
    var mainView = new View(document, "main"); 
    mainView.repo = repository; 
    new RepoMainSection(mainView); 

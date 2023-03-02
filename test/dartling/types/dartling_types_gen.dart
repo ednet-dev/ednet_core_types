@@ -3,11 +3,11 @@
  
 import "package:ednet_core_types/ednet_core_types.dart"; 
  
-genCode(Repository repository) { 
+genCode(CoreRepository repository) { 
   repository.gen("ednet_core_types"); 
 } 
  
-initData(Repository repository) { 
+initData(CoreRepository repository) { 
    var ednetCoreDomain = repository.getDomainModels("EDNetCore"); 
    var typesModel = ednetCoreDomain.getModelEntries("Types"); 
    typesModel.init(); 
