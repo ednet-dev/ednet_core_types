@@ -24,7 +24,7 @@ class EntityTable {
     addButton.onClick.listen(addEntity);
     updateButton.onClick.listen(updateEntity);
     removeButton.onClick.listen(removeEntity);
-    cancelButton.onClick.listen(cancelAction);
+    cancelButton.onClick.listen(cancelCommand);
   }
   
   display() {
@@ -196,7 +196,7 @@ class EntityTable {
     }
   }
   
-  cancelAction(Event e) {
+  cancelCommand(Event e) {
     emptyData();
     firstField().focus();
     currentEntity = null;

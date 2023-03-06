@@ -311,8 +311,8 @@ testEDNetCoreTypesTypes(
       types.remove(type); 
       expect(types.length, equals(--typeCount)); 
  
-      var action = new AddAction(session, types, type); 
-      action.doit(); 
+      var action = new AddCommand(session, types, type); 
+      action.doIt(); 
       expect(types.length, equals(++typeCount)); 
  
       action.undo(); 
@@ -340,8 +340,8 @@ testEDNetCoreTypesTypes(
       types.remove(type); 
       expect(types.length, equals(--typeCount)); 
  
-      var action = new AddAction(session, types, type); 
-      action.doit(); 
+      var action = new AddCommand(session, types, type); 
+      action.doIt(); 
       expect(types.length, equals(++typeCount)); 
  
       session.past.undo(); 
@@ -353,8 +353,8 @@ testEDNetCoreTypesTypes(
  
     test("Type update undo and redo", () { 
       var type = types.random(); 
-      var action = new SetAttributeAction(session, type, "title", 'theme'); 
-      action.doit(); 
+      var action = new SetAttributeCommand(session, type, "title", 'theme'); 
+      action.doIt(); 
  
       session.past.undo(); 
       expect(type.title, equals(action.before)); 
@@ -367,14 +367,14 @@ testEDNetCoreTypesTypes(
       var typeCount = types.length; 
       var type1 = types.random(); 
  
-      var action1 = new RemoveAction(session, types, type1); 
-      action1.doit(); 
+      var action1 = new RemoveCommand(session, types, type1); 
+      action1.doIt(); 
       expect(types.length, equals(--typeCount)); 
  
       var type2 = types.random(); 
  
-      var action2 = new RemoveAction(session, types, type2); 
-      action2.doit(); 
+      var action2 = new RemoveCommand(session, types, type2); 
+      action2.doIt(); 
       expect(types.length, equals(--typeCount)); 
  
       //session.past.display(); 
@@ -403,13 +403,13 @@ testEDNetCoreTypesTypes(
       while (type1 == type2) { 
         type2 = types.random();  
       } 
-      var action1 = new RemoveAction(session, types, type1); 
-      var action2 = new RemoveAction(session, types, type2); 
+      var action1 = new RemoveCommand(session, types, type1); 
+      var action2 = new RemoveCommand(session, types, type2); 
  
       var transaction = new Transaction("two removes on types", session); 
       transaction.add(action1); 
       transaction.add(action2); 
-      transaction.doit(); 
+      transaction.doIt(); 
       typeCount = typeCount - 2; 
       expect(types.length, equals(typeCount)); 
  
@@ -432,14 +432,14 @@ testEDNetCoreTypesTypes(
       var typeCount = types.length; 
       var type1 = types.random(); 
       var type2 = type1; 
-      var action1 = new RemoveAction(session, types, type1); 
-      var action2 = new RemoveAction(session, types, type2); 
+      var action1 = new RemoveCommand(session, types, type1); 
+      var action2 = new RemoveCommand(session, types, type2); 
  
       var transaction = new Transaction( 
         "two removes on types, with an error on the second", session); 
       transaction.add(action1); 
       transaction.add(action2); 
-      var done = transaction.doit(); 
+      var done = transaction.doIt(); 
       expect(done, isFalse); 
       expect(types.length, equals(typeCount)); 
  
@@ -452,7 +452,7 @@ testEDNetCoreTypesTypes(
       var reaction = new TypeReaction(); 
       expect(reaction, isNotNull); 
  
-      ednetCoreDomain.startActionReaction(reaction); 
+      ednetCoreDomain.startCommandReaction(reaction); 
           var type = new dt.Type(types.concept); 
       type.title = 'tent'; 
       type.email = 'patrick@smith.com'; 
@@ -470,29 +470,29 @@ testEDNetCoreTypesTypes(
       expect(types.length, equals(--typeCount)); 
  
       var session = ednetCoreDomain.newSession(); 
-      var addAction = new AddAction(session, types, type); 
-      addAction.doit(); 
+      var addCommand = new AddCommand(session, types, type); 
+      addCommand.doIt(); 
       expect(types.length, equals(++typeCount)); 
       expect(reaction.reactedOnAdd, isTrue); 
  
-      var setAttributeAction = new SetAttributeAction( 
+      var setAttributeCommand = new SetAttributeCommand( 
         session, type, "title", 'message'); 
-      setAttributeAction.doit(); 
+      setAttributeCommand.doIt(); 
       expect(reaction.reactedOnUpdate, isTrue); 
-      ednetCoreDomain.cancelActionReaction(reaction); 
+      ednetCoreDomain.cancelCommandReaction(reaction); 
     }); 
  
   }); 
 } 
  
-class TypeReaction implements ActionReactionApi { 
+class TypeReaction implements CommandReactionApi { 
   bool reactedOnAdd    = false; 
   bool reactedOnUpdate = false; 
  
-  react(BasicAction action) { 
-    if (action is EntitiesAction) { 
+  react(BasicCommand action) { 
+    if (action is EntitiesCommand) { 
       reactedOnAdd = true; 
-    } else if (action is EntityAction) { 
+    } else if (action is EntityCommand) { 
       reactedOnUpdate = true; 
     } 
   } 
