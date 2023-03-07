@@ -9,7 +9,7 @@ var ednetCoreTypesModelJson = r'''
 {
    "width":990,
    "height":580,
-   "boxes":[
+   "concepts":[
       {
          "name":"Type",
          "entry":true,
@@ -17,7 +17,7 @@ var ednetCoreTypesModelJson = r'''
          "y":236,
          "width":120,
          "height":200,
-         "items":[
+         "attributes":[
             {
                "sequence":10,
                "name":"sequence",
@@ -120,7 +120,7 @@ var ednetCoreTypesModelJson = r'''
          ]
       }
    ],
-   "lines":[
+   "relations":[
 
    ]
 }

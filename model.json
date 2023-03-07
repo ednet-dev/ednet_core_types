@@ -1,7 +1,7 @@
 {
    "width":990,
    "height":580,
-   "boxes":[
+   "concepts":[
       {
          "name":"Type",
          "entry":true,
@@ -9,7 +9,7 @@
          "y":236,
          "width":120,
          "height":200,
-         "items":[
+         "attributes":[
             {
                "sequence":10,
                "name":"sequence",
@@ -112,7 +112,7 @@
          ]
       }
    ],
-   "lines":[
+   "relations":[
 
    ]
 }
